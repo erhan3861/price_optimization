@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'PricePredictionAPI.urls'
+ROOT_URLCONF = 'price_optimization_API.urls'
 
 TEMPLATES = [
     {
@@ -65,12 +65,14 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                #'api.context_processors.ilk_islec',
+                
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'PricePredictionAPI.wsgi.application'
+WSGI_APPLICATION = 'price_optimization_API.wsgi.application'
 
 
 # Database
@@ -121,6 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,  'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

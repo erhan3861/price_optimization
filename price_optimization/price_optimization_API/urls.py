@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path,include
 from api import views
 #from django.conf.urls import url, include, path
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -26,4 +28,8 @@ urlpatterns = [
     # add these to configure our home page (default view) and result web page
     path('', views.home, name='home'),
     path('result/', views.result, name='result'),
-]
+    path('data/', views.get_data, name='get_data'),
+    path('getfile/', views.getfile, name='getfile'),
+] 
+
+urlpatterns += staticfiles_urlpatterns()
