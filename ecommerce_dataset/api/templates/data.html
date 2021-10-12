@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Data Mining Page</title>
+  </head>
+  <body>
+    <h1>E-commerce Dataset</h1>
+    <form action="{% url 'get_data' %}">
+      {% csrf_token %}
+      
+      <p>Price Class:</p>
+      <input type="text" name="price_class">
+      <br>
+
+      
+      <input type="submit" value='Get Dataset'>
+    </form>
+  </body>
+</html>
