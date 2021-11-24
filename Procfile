@@ -1,1 +1,1 @@
-web: gunicorn price_optimization_API.wsgi 
+web: gunicorn price_optimization.wsgi 
