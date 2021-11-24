@@ -1,1 +1,1 @@
-web: gunicorn price_optimization_API.wsgi --log-file -
+web: gunicorn price_optimization_API.wsgi 
