@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath price_optimization_API price_optimization_API.wsgi
+web: gunicorn price_optimization.price_optimization_API.wsgi
